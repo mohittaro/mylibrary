@@ -12,7 +12,7 @@ def contDepl(Jobname,IPaddress,context)
 }
 def contTest(Jobname)
 {
-  sh 'java -jar  /var/lib/jenkins/workspace/${Jobname}/testing.jar'
+  sh "java -jar  /var/lib/jenkins/workspace/${Jobname}/testing.jar"
 }
 
 
