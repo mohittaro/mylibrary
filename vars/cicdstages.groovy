@@ -10,4 +10,9 @@ def contDepl(Jobname,IPaddress,context)
 {
   sh "scp /var/lib/jenkins/workspace/${Jobname}/webapp/target/webapp.war ubuntu@${IPaddress}:/var/lib/tomcat9/webapps/${context}.war"
 }
+def contTest(Jobname)
+{
+  sh 'java -jar  /var/lib/jenkins/workspace/${Jobname}/testing.jar'
+}
+
 
